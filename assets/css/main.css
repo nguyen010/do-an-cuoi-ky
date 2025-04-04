@@ -5,27 +5,27 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Màu sắc toàn cục - Các biến màu sau được sử dụng trên toàn bộ trang web. Cập nhật chúng tại đây sẽ thay đổi bảng màu của toàn bộ trang web. */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; /* Màu nền cho toàn bộ trang web, bao gồm cả các phần riêng lẻ.  */
+  --default-color: #272829; /*  Màu mặc định được sử dụng cho phần lớn nội dung văn bản trên toàn bộ trang web.  */
+  --heading-color: #050d18; /* Màu dành cho tiêu đề chính, tiêu đề phụ và tiêu đề trên toàn bộ trang web.  */
+  --accent-color: #149ddd; /* Màu nhấn đại diện cho thương hiệu của bạn trên trang web. Nó được sử dụng cho các nút, liên kết và các thành phần khác cần nổi bật.  */
+  --surface-color: #ffffff; /* Màu bề mặt được sử dụng làm nền cho các phần tử được đóng hộp trong các phần, chẳng hạn như thẻ, hộp biểu tượng hoặc các phần tử khác cần tách biệt trực quan với nền chung. */
+  --contrast-color: #ffffff; /* Màu tương phản cho văn bản, đảm bảo khả năng đọc trên nền của màu nhấn, màu tiêu đề hoặc màu mặc định.  */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Màu menu điều hướng - Các biến màu sau được sử dụng riêng cho menu điều hướng. Chúng tách biệt với màu sắc toàn cục để cho phép tùy chỉnh linh hoạt hơn.*/
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #a8a9b4;  /*Màu mặc định của các liên kết trong menu điều hướng chính.  */
+  --nav-hover-color: #ffffff; /* Áp dụng cho các liên kết trong menu điều hướng chính khi chúng được di chuột qua hoặc đang hoạt động.  */
+  --nav-mobile-background-color: #040b14; /* Được sử dụng làm màu nền cho menu điều hướng trên di động.  */
+  --nav-dropdown-background-color: #040b14; /* Được sử dụng làm màu nền cho các mục dropdown xuất hiện khi di chuột qua các mục điều hướng chính.  */
+  --nav-dropdown-color: #a8a9b4; /* Được sử dụng cho các liên kết điều hướng của các mục trong menu dropdown.*/
+  --nav-dropdown-hover-color: #ffffff; /* Tương tự như --nav-hover-color, màu này được áp dụng cho các liên kết điều hướng trong dropdown khi người dùng di chuột qua. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Mẫu màu - Các lớp này ghi đè lên màu toàn cục khi được áp dụng cho bất kỳ phần hoặc yếu tố nào, giúp tái sử dụng cùng một bảng màu.*/
 
 .light-background {
   --background-color: #f4fafd;
@@ -40,13 +40,13 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
+/* Cuộn */
 :root {
   scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
-# General Styling & Shared Classes
+# Kiểu dáng chung & Lớp chia sẻ
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
@@ -75,48 +75,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
 @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
@@ -128,7 +86,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+# Tiêu đề 
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
@@ -235,7 +193,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Menu điều hướng
 --------------------------------------------------------------*/
 .mobile-nav-toggle {
   display: none;
@@ -350,7 +308,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Chân trang
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
@@ -372,7 +330,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
+# Trình tải trước
 --------------------------------------------------------------*/
 #preloader {
   position: fixed;
@@ -407,7 +365,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Scroll Top Button
+# Nút cuộn lên đầu trang
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
@@ -441,7 +399,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
+# ô hiệu hóa độ trễ hoạt ảnh AOS trên các thiết bị di động
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
@@ -450,7 +408,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
+# Tiêu đề trang toàn cầu & Dấu vết đường dẫn
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
@@ -486,7 +444,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Sections
+# Các phần toàn cầu
 --------------------------------------------------------------*/
 section,
 .section {
@@ -497,7 +455,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Global Section Titles
+# Tiêu đề các phần toàn cầu
 --------------------------------------------------------------*/
 .section-title {
   padding-bottom: 60px;
@@ -528,7 +486,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Phần giới thiệu chính
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
@@ -607,7 +565,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# Phần Giới thiệu
 --------------------------------------------------------------*/
 .about .content h2 {
   font-weight: 700;
@@ -637,7 +595,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Stats Section
+# Phần Thống kê
 --------------------------------------------------------------*/
 .stats .stats-item {
   padding: 30px;
@@ -670,7 +628,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# Phần Kỹ năng
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -707,7 +665,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resume Section
+# Phần Sơ yếu lý lịch
 --------------------------------------------------------------*/
 .resume .resume-title {
   color: var(--heading-color);
@@ -766,7 +724,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Phần Danh mục công việc
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
@@ -879,7 +837,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Phần Dịch vụ
 --------------------------------------------------------------*/
 .services .service-item {
   position: relative;
@@ -932,7 +890,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# "Phần Lời chứng thực
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1029,7 +987,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Contact Section
+# "Phần Liên hệ
 --------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
@@ -1130,7 +1088,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details Section
+# Phần Chi tiết Danh mục công việc
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
@@ -1191,7 +1149,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+# Phần Chi tiết Dịch vụ
 --------------------------------------------------------------*/
 .service-details .services-list {
   padding: 10px 30px;
@@ -1256,8 +1214,26 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Phần Bắt đầu
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+#modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
+#modal button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
