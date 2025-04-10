@@ -38,7 +38,7 @@ async function fetchWeather() {
         const minTemp = weatherData.DailyForecasts[0].Temperature.Minimum.Value;
         const maxTemp = weatherData.DailyForecasts[0].Temperature.Maximum.Value;
 
-        document.getElementById("temperature").innerText = `Nhiệt Độ Thấp Nhất : ${minTemp}°C, Nhiệt Độ Cao Nhất: ${maxTemp}°C`;
+       document.getElementById("temperature").innerText = `Nhiệt Độ Thấp Nhất : ${minTemp}°C, Nhiệt Độ Cao Nhất: ${maxTemp}°C`;
         document.getElementById("modal").style.display = "block";
 
        
